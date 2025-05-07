@@ -42,5 +42,9 @@ I have finished creating the home page using Kotlin.
 https://github.com/user-attachments/assets/48004e2c-c9d5-41ae-b277-27b994f94c7c
 
 
+##Links
+prototype link (figma) : https://www.figma.com/design/dc6Zw8inQB4wXwgzOxzV56/Untitled?node-id=5-2&t=8cfUABBGaQqvyXYF-1
 
+uizard : https://app.uizard.io/p/98e995f0
+uizard2 : https://app.uizard.io/p/d8ae985f/overview
 
