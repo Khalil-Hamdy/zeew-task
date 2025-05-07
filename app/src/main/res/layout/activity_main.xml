@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutBottom"
+        app:navGraph="@navigation/home_nav" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:src="@drawable/ic_profile"
+                app:tint="@color/secoundry_color" />
+
+            <TextView
+                android:id="@+id/txtProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:fontFamily="@font/sans_arabic_medium"
+                android:textColor="@color/secoundry_color"
+                android:textSize="@dimen/_10sdp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearMyOrders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/imgMyOrders"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:src="@drawable/ic_my_orders"
+                app:tint="@color/secoundry_color" />
+
+            <TextView
+                android:id="@+id/txtMyOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Orders"
+                android:fontFamily="@font/sans_arabic_medium"
+                android:textColor="@color/secoundry_color"
+                android:textSize="@dimen/_10sdp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/secoundry_color" />
+
+            <TextView
+                android:id="@+id/txtSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:fontFamily="@font/sans_arabic_medium"
+                android:textColor="@color/secoundry_color"
+                android:textSize="@dimen/_10sdp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearTrending"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/imgTrending"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:src="@drawable/ic_trending"
+                app:tint="@color/secoundry_color" />
+
+            <TextView
+                android:id="@+id/txtTrending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trending"
+                android:fontFamily="@font/sans_arabic_medium"
+                android:textColor="@color/secoundry_color"
+                android:textSize="@dimen/_10sdp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:src="@drawable/ic_home"
+                app:tint="@color/secoundry_color" />
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="home"
+                android:fontFamily="@font/sans_arabic_medium"
+                android:textColor="@color/secoundry_color"
+                android:textSize="@dimen/_10sdp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.home.fragment.HomeFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="center">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/iconMicrophone"
+             android:layout_width="@dimen/_30sdp"
+             android:layout_height="@dimen/_30sdp"
+             android:src="@drawable/ic_microphone"
+             android:background="@drawable/circle_shap"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             android:layout_margin="@dimen/_10sdp"
+             android:padding="@dimen/_5sdp"
+             />
+
+         <ImageView
+             android:id="@+id/iconLocation"
+             android:layout_width="@dimen/_15sdp"
+             android:layout_height="@dimen/_20sdp"
+             android:src="@drawable/ic_location"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="@id/iconMicrophone"
+             app:layout_constraintBottom_toBottomOf="@id/iconMicrophone"
+             android:layout_margin="@dimen/_10sdp"
+             />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="New York, NY"
+             android:textSize="@dimen/_16ssp"
+             android:fontFamily="@font/sans_arabic_semi_bold"
+             android:textColor="@color/primary_color"
+             android:gravity="start"
+             app:layout_constraintStart_toEndOf="@id/iconLocation"
+             app:layout_constraintTop_toTopOf="@id/iconLocation"
+             app:layout_constraintBottom_toBottomOf="@id/iconLocation"
+             android:layout_marginHorizontal="@dimen/_5sdp"
+             app:layout_constraintEnd_toStartOf="@id/iconMicrophone"/>
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardElevation="6dp"
+          app:cardCornerRadius="@dimen/_25sdp"
+          app:cardBackgroundColor="@color/white"
+          app:cardUseCompatPadding="true"
+          android:clickable="true">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@drawable/background_search"
+             >
+
+            <ImageView
+                android:id="@+id/iconSearch"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="@dimen/_10sdp"
+                app:tint="#94A3B8"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Search for restaurants, items,..."
+                android:textSize="@dimen/_14ssp"
+                android:lines="1"
+                android:fontFamily="@font/sans_arabic_regular"
+                android:textColor="#94A3B8"
+                android:textColorHint="#94A3B8"
+                android:gravity="start"
+                app:layout_constraintStart_toEndOf="@id/iconSearch"
+                app:layout_constraintTop_toTopOf="@id/iconSearch"
+                app:layout_constraintBottom_toBottomOf="@id/iconSearch"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/white"/>
+
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="🔥 Today’s Deals"
+          android:textSize="@dimen/_14ssp"
+          android:fontFamily="@font/sans_arabic_bold"
+          android:textColor="@color/black"
+          android:gravity="start"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/recyclerTodayDeals"
+          tools:listitem="@layout/item_today_deals"
+          tools:itemCount="1"
+          android:layoutDirection="rtl"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:layout_marginTop="@dimen/_10sdp"/>
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="What would you like to order ?"
+             android:textSize="@dimen/_14ssp"
+             android:fontFamily="@font/sans_arabic_bold"
+             android:textColor="@color/black"
+             android:gravity="start"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_marginHorizontal="@dimen/_10sdp"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toStartOf="@id/textViewAllCategory"
+             app:layout_constraintStart_toStartOf="parent"
+             />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/textViewAllCategory"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="View All"
+             android:textSize="@dimen/_11ssp"
+             android:fontFamily="@font/sans_arabic_regular"
+             android:textColor="@color/primary_color"
+             android:gravity="center"
+             android:paddingHorizontal="@dimen/_10sdp"
+             android:paddingVertical="@dimen/_5sdp"
+             android:background="@drawable/background_viewall"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_marginHorizontal="@dimen/_10sdp"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/recyclerCategory"
+          tools:listitem="@layout/item_today_deals"
+          tools:itemCount="1"
+          android:layoutDirection="rtl"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:layout_marginTop="@dimen/_10sdp"/>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="Verified Stores"
+             android:textSize="@dimen/_14ssp"
+             android:fontFamily="@font/sans_arabic_bold"
+             android:textColor="@color/black"
+             android:gravity="start"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_marginHorizontal="@dimen/_10sdp"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toStartOf="@id/textViewAllStores"
+             app:layout_constraintStart_toStartOf="parent"
+             />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/textViewAllStores"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="View All"
+             android:textSize="@dimen/_11ssp"
+             android:fontFamily="@font/sans_arabic_regular"
+             android:textColor="@color/primary_color"
+             android:gravity="center"
+             android:paddingHorizontal="@dimen/_10sdp"
+             android:paddingVertical="@dimen/_5sdp"
+             android:background="@drawable/background_viewall"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_marginHorizontal="@dimen/_10sdp"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/recyclerStores"
+          tools:listitem="@layout/item_today_deals"
+          tools:itemCount="1"
+          android:layoutDirection="rtl"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+   </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

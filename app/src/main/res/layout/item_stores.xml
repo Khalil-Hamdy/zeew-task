@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true"
+    android:clickable="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:background="@drawable/background_store">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageStore"
+            app:riv_corner_radius_top_left="@dimen/_15sdp"
+            app:riv_corner_radius_top_right="@dimen/_15sdp"
+            app:riv_corner_radius_bottom_left="@dimen/_15sdp"
+            app:riv_corner_radius_bottom_right="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/imageStore"
+            app:layout_constraintEnd_toEndOf="@id/imageStore"
+            app:layout_constraintStart_toStartOf="@id/imageStore"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCategory1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_regular"
+            android:textColor="@color/primary_color"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintEnd_toEndOf="@id/imageStore"
+            app:layout_constraintStart_toStartOf="@id/imageStore"
+            />
+
+        <ImageView
+            android:id="@+id/iconStar"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_star"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textCategory1"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_regular"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toTopOf="@id/iconStar"
+            app:layout_constraintBottom_toBottomOf="@id/iconStar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconStar"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
